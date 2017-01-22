@@ -727,7 +727,7 @@ void setRelay(uint8_t power)
     Serial.write('\n');
     Serial.flush();
   } else {
-    digitalWrite(REL_PIN, power & 0x1);
+    digitalWrite(REL_PIN, !(power & 0x1));
 #ifdef REL2_PIN
     if (Maxdevice > 1) digitalWrite(REL2_PIN, (power & 0x2));
 #endif
@@ -2613,8 +2613,7 @@ void setup()
   if (!sysCfg.model) {
     sysCfg.model = SONOFF;
 #if (MODULE == SONOFF)
-    pinMode(REL_PIN, INPUT_PULLUP);
-    if (digitalRead(REL_PIN)) sysCfg.model = SONOFF_DUAL;
+    pinMode(REL_PIN, OUTPUT);    //if (digitalRead(REL_PIN)) sysCfg.model = SONOFF_DUAL;
 #endif
 #if (MODULE == SONOFF_2)
 #ifdef REL3_PIN

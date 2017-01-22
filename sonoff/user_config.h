@@ -148,20 +148,20 @@
   #define APP_NAME             "Sonoff 8266 Module"
   #define MQTT_GRPTOPIC        "sonoffs"    // [GroupTopic] MQTT Group topic
 /*-------------------------------------------------------------------------------------------*/
-  #define LED_PIN              13           // GPIO 13 = Green/Blue Led (0 = On, 1 = Off) - Sonoff
+  #define LED_PIN              12           // GPIO 13 = Green/Blue Led (0 = On, 1 = Off) - Sonoff
   #define LED_INVERTED         1            // 0 = (1 = On, 0 = Off), 1 = (0 = On, 1 = Off)
-  #define REL_PIN              12           // GPIO 12 = Red Led and Relay (0 = Off, 1 = On)
-  #define KEY_PIN              0            // GPIO 00 = Button
+  #define REL_PIN              13           // GPIO 12 = Red Led and Relay (0 = Off, 1 = On)
+  #define KEY_PIN              5            // GPIO 00 = Button
 /*-------------------------------------------------------------------------------------------*\
  * Wall switch and HC-SR501
 \*-------------------------------------------------------------------------------------------*/
-  #define SWITCH_PIN           14           // GPIO 14 = Standard wall switch to Gnd (Sonoff_TH10A(16A), Sonoff SV)
+  #define SWITCH_PIN           5           // GPIO 14 = Standard wall switch to Gnd (Sonoff_TH10A(16A), Sonoff SV)
   #define SWITCH_MODE          TOGGLE       // [SwitchMode] TOGGLE, FOLLOW, FOLLOW_INV, PUSHBUTTON or PUSHBUTTON_INV (the wall switch state)
 //  #define USE_WALL_SWITCH                   // Enable the use of a standard wall switch to control the relay
 /*-------------------------------------------------------------------------------------------*\
  * Single wire devices DS18B20 and DS18S20
 \*-------------------------------------------------------------------------------------------*/
-  #define DSB_PIN              14           // GPIO 14 = DS18x20 (Sonoff_TH10A(16A), Sonoff SV)
+//  #define DSB_PIN              14           // GPIO 14 = DS18x20 (Sonoff_TH10A(16A), Sonoff SV)
   // *** Option 1 - Single DS18B20 - Select either Option 1 OR Option 2
 //  #define SEND_TELEMETRY_DS18B20            // Enable sending single temperature telemetry
   // *** Option 2 - Multiple DS18B20 and/or DS18S20 (needs OneWire library!)
@@ -199,9 +199,9 @@
   #define APP_NAME             "Sonoff 8285 Module"
   #define MQTT_GRPTOPIC        "sonoff2s"   // [GroupTopic] MQTT Group topic
 /*-------------------------------------------------------------------------------------------*/
-  #define LED_PIN              13           // GPIO 13 = Green/Blue Led (0 = On, 1 = Off) - Sonoff
+  #define LED_PIN              12           // GPIO 13 = Green/Blue Led (0 = On, 1 = Off) - Sonoff
   #define LED_INVERTED         1            // 0 = (1 = On, 0 = Off), 1 = (0 = On, 1 = Off)
-  #define REL_PIN              12           // GPIO 12 = Red Led and Relay (0 = Off, 1 = On)
+  #define REL_PIN              13           // GPIO 12 = Red Led and Relay (0 = Off, 1 = On)
   #define KEY_PIN              0            // GPIO 00 = Button
   // Sonoff 4CH additions
   #define REL2_PIN             5            // GPIO 05 = Red Led and Relay 2 (0 = Off, 1 = On)
